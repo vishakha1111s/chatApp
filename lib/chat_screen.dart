@@ -10,7 +10,16 @@ class _ChatState extends State<Chat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        leading: Row(children: <Widget>[
+          Icon(Icons.arrow_back),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: CircleAvatar(
+              radius: 1.0,
+            ),
+          )
+        ]),
+        title: Text('Itribe Group Chat'),
       ),
     );
   }
