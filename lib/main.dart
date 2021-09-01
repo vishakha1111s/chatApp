@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:itribe23/chat_screen.dart';
 import 'package:itribe23/registration_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  // Ensure that Firebase is initialized
+  WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Firebase
+  await Firebase.initializeApp();
+  //
   runApp(MyApp());
 }
 
