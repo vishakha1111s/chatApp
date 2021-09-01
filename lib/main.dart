@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:itribe23/chat_screen.dart';
+import 'package:itribe23/registration_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.light(),
-      home: Chat(),
+      home: RegistrationScreen(),
     );
   }
 }
