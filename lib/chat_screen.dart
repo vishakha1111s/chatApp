@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 //import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+late User loggedUser; //firebaseuser
+late bool isMe;
 
 class Chat extends StatefulWidget {
   @override
@@ -7,6 +11,25 @@ class Chat extends StatefulWidget {
 }
 
 class _ChatState extends State<Chat> with TickerProviderStateMixin {
+  final _auth = FirebaseAuth.instance;
+
+  late String message; //message which user sends
+
+  final messageController = TextEditingController();
+
+  void getUserInput() async {
+    final user = await _auth.currentUser;
+    try {
+      if (user != null) {
+        //user aa gya ki ni wo check krre
+        loggedUser = user;
+        // print(loggedUser);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
   late AnimationController controller;
   late Animation animation2;
 
@@ -18,6 +41,7 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    getUserInput();
     controller = AnimationController(
       duration: Duration(seconds: 1),
       // lowerBound: 1,
