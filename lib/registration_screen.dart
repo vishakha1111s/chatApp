@@ -1,7 +1,5 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:itribe23/chat_screen.dart';
-import 'package:itribe23/components/roundedbutton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:itribe23/components/constant.dart';
