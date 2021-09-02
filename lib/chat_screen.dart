@@ -121,6 +121,11 @@ class _ChatState extends State<Chat> with TickerProviderStateMixin {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Image.asset(
+              'images/itribe.png',
+              width: 50.0,
+              height: 50,
+            ),
             messageBuilder(),
             Container(
               decoration: kMessageContainerDecoration,
