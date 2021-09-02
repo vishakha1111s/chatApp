@@ -72,29 +72,36 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             SizedBox(
               height: 24.0,
             ),
-            MaterialButton(
-              color: Colors.lightBlue,
-              onPressed: () async {
-                try {
-                  //if user is succesfully register then this user gets saved in authentication object as current user.
-                  final newUser = await _auth.createUserWithEmailAndPassword(
-                      email: email, password: password);
-                  setState(() {
-                    showspinner =
-                        false; //jab create ho jaye toh spinner hat jaye
-                  });
-                  if (newUser != null) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Chat(),
-                      ),
-                    );
+            Material(
+              child: MaterialButton(
+                textColor: Colors.white,
+                color: Colors.lightBlue,
+                onPressed: () async {
+                  try {
+                    //if user is succesfully register then this user gets saved in authentication object as current user.
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    setState(() {
+                      showspinner =
+                          false; //jab create ho jaye toh spinner hat jaye
+                    });
+                    if (newUser != null) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Chat(),
+                        ),
+                      );
+                    }
+                  } catch (e) {
+                    print(e);
                   }
-                } catch (e) {
-                  print(e);
-                }
-              },
+                },
+                child: Text(
+                  "Register",
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
             //from roundedbutton.dart
           ],
