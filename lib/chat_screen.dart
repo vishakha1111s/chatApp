@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -199,7 +201,7 @@ class BubbleText extends StatelessWidget {
               ),
             ),
           ),
-          Image.asset('images/itribe.png'),
+          // Image.asset('images/itribe.png'),
         ],
       ),
     );
@@ -239,6 +241,8 @@ class messageBuilder extends StatelessWidget {
           );
 
           messagesWidgets.add(messageWidgets);
+          //  messageWidgets.add(Image.asset('images/itribe.png'));
+
         }
         return Expanded(
           child: ListView(
