@@ -61,7 +61,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 password = value;
               },
               decoration: kFieldDeclartion.copyWith(
-                hintText: 'Password',
+                hintText: 'Give Me Password',
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
@@ -96,7 +96,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   }
                 },
                 child: Text(
-                  "Register",
+                  "Register the User",
                   textAlign: TextAlign.center,
                 ),
               ),
