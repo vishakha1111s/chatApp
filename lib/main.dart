@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light(),
       home: RegistrationScreen(),
+      
     );
   }
 }
