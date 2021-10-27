@@ -61,7 +61,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 password = value;
               },
               decoration: kFieldDeclartion.copyWith(
-                hintText: 'Password',
+                hintText: 'Enter the Password',
                 hintStyle: TextStyle(
                   color: Colors.grey,
                 ),
